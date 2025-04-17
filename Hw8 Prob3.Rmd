@@ -1,0 +1,33 @@
+---
+title: "Homework 8 Problem 3"
+output: pdf_document
+date: "2024-12-03"
+---
+## Part a
+```{r}
+x <- 4
+y <- -2
+
+x + y   # Addition
+x / y   # Division
+x ^ y   # Exponential
+```
+
+## Part b
+```{r}
+A <- matrix(c(1, 2, -1, 2, 0, 1, 1, -1, 1), nrow=3, byrow=TRUE)
+x <- c(2, 3, 1)
+
+b <- A %*% x  # Matrix multiplication
+b
+```
+
+## Part c
+```{r}
+A <- matrix(c(1, 2, -1, 2, 0, 1, 1, -1, 1), nrow=3, byrow=TRUE)
+b <- c(7, 5, 0)
+
+solution <- solve(A, b)  # Solve Ax = b
+solution
+```
+

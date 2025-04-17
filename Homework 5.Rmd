@@ -1,0 +1,225 @@
+---
+title: "Homework Assignment 5"
+author: "Yolanda Meng"
+date: "Nov.13.2023" 
+output:
+  pdf_document: default
+  word_document: default
+  html_document:
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+## Include the command to load the data here!!!!
+```
+
+* * *
+
+## Question 1 (Exercise 4.8 on Page 143):  
+
+### a)
+Z = (0-14.7)$/$33 = -0.45
+P(Z<-0.45) = 0.3264
+Approximately 32.64% of years this portfolio loses money.
+
+
+### b) 
+
+100%-15% = 85% = 0.85
+P(Z<1.04) = 0.85
+X = 14.7 + 1.04* 33 = 49.02
+The cutoff for the highest 15% of annual returns with this portfolio is 49.02.
+
+
+
+## Question 2 (Exercise 4.9 on Page 143): 
+
+### a)
+
+mean: C = (77-32) * 5$/$9 = 25Celsius
+sd: C = 5* 5$/$9 = 2.78Celsius
+Z = (X-25)$/$(2.78)
+X~N[25, 2.78]
+
+### b)
+
+Z = (28-25)$/$(2.78) = 1.08
+P(Z>1.08) = 1-P(Z<=1.08) = 1-0.8599 = 0.1401
+The probability is approximately 14.01%.
+
+### c)
+
+Part (a) in Exercise 4.7: Z = (83-77)$/$5 = 1.2
+P(Z>1.2) = 1-P(Z<=1.2) = 1-0.8849 = 0.1151
+The probability in exercise 4.7 is approximately 11.51%, which is different from the answer we get in part (b), and I am surprised about that. Maybe it is because of the non-linear relationship between Fahrenheit and Celsius, the results in these two parts are different ultimately.
+
+### d)
+
+Q1 = 23.13
+Q3 = 26.86
+IQR = Q3-Q1 = 26.86-23.13 = 3.73
+
+## Question 3 (Exercise 5.4 on Page 179):  
+
+### a)
+
+The population under consideration in the data set is 765 adults in the United States.
+
+
+### b)
+
+The parameter being estimated is the proportion of all adults in the United States who could not cover a $400 unexpected expense without borrowing money or going into debt.
+
+
+### c)
+phat = x$/$n = 322$/$765 = 0.421 = 42.1%
+The point estimate for the parameter is 42.1%.
+
+
+### d)
+
+The statistic we use is the standard error of the proportion.
+
+
+### e)
+
+phat = 0.421
+n = 765
+SE = sqrt(phat* (1-phat)$/$n) = sqrt(0.421*(1-0.421)$/$765) = 0.018
+
+### f)
+
+She thinks the value is actually 50%, but the estimated value is 42.1%, so she should be surprised by the data a little since there are differences between the actual value and the estimated value.
+
+### g)
+
+p = 0.4
+n = 765
+SE = sqrt(p* (1-p)$/$n) = sqrt(0.4*(1-0.4)$/$765) = 0.018
+
+Comparing the standard errors, we can see that the difference is small. This suggests that the point estimate is relativelt stable even when using a slightly different assumed population proportion.
+
+
+## Question 4 (Exercise 5.6 on Page 180):  
+
+### a)
+
+The distribution is called the sampling distribution of the sample proportion.
+
+
+### b)
+
+The shape is expected to be approximately symmetric because of the Central Limit Theorem, which states that the distribution of sample means will be approximately normal if the sample size is sufficiently large, regardless of the shape of the population distribution. In this case, the sample size is 40, for repeating 1000 times, which is reasonably large, so we would expect the distribution to be symmetric.
+
+
+### c)
+
+p = 16% = 0.16
+n = 40
+variability = sqrt(p* (1-p)$/$n) = sqrt(0.16* (1-0.16)$/$40) = 0.058
+The variability of this distribution is 0.058.
+
+
+### d)
+
+The formal name is the standard error of the sample proportion.
+
+
+### e)
+
+p = 16% = 0.16
+n = 90
+variability = sqrt(p* (1-p)$/$n) = sqrt(0.16* (1-0.16)$/$90) = 0.039
+
+The new variability of this distribution is 0.039, which is smaller thatn the variability of distribution when each sample contained 40 observations. This is because increasing the sample size reduces the standard error of the sample proportion, making the distribution narrower.
+
+
+## Question 5 (Exercise 5.8 on Page 187): 
+
+Confidence Interval = phat +- Z*SE
+phat = 52% = 0.52
+SE = 2.4% = 0.024
+Z = (100%-99%)$/$2 = 0.01$/$2 = 0.005
+Z(0.005) = -2.57
+Confidence Interval = 0.52 +- (-2.57)*0.024 = [0.458, 0.582] = [45.8%, 58.2%]
+
+We are 99% confident that the true fraction of U.S. adult Twitter users who get some news on Twitter lies between 45.8% and 58.2%. This means that if we were to conduct many surveys and construct confidence intervals in the same way, about 99% of those intervals would contain the true population proportion.
+
+
+## Question 6 (Exercise 5.10 on Page 187): 
+
+### a)
+
+False. The statement about statistical significance is related to hypothesis testing. In this case, the statement is saying that the true proportion is more than half. To test this, we would compare the observed proportion to a null hypothesis. The given data does not provide enough information about the null hypothesis or the test statistic, so we cannot determine statistical significance based on the information provided.
+
+### b)
+
+False. The standard error is a measure of the precision of the estimate, not the percentage of the population included in the study.
+
+
+### c)
+
+False. In order to reduce the standard error, we should collect more data and increase the sample size.
+
+
+
+### d)
+
+False. A 99% confidence interval will be wider than a 90% confidence interval because it needs to be more conservative to capture a higher percentage of possible sample means.
+
+
+## Question 7 (Exercise 5.11 on Page 188): 
+
+### a)
+
+False. Confidence interval only focuses on the population rather than the sample.
+
+### b)
+
+True. The confidence interval is designed to estimate the true population mean, so we can be 95% confident that the whole population falls between 128 and 147 minutes.
+
+### c)
+
+False. The correct interpretation should be if we were to take many random samples and calculate a 95% confidence interval for each sample, 95% of those intervals would contain the true population mean. It does not imply that the sample means themselves from individual samples would fall within the interval.
+
+### d)
+
+False. A higher confidence level results in a wider confidence interval because we need to be more confident that the interval captures the true population mean.
+
+### e)
+
+True. The mean here is (128+147)$/$2 = 137.5. And the margin of error is the range around the sample mean within which we expect the true population mean to lie. In this case, the interval is from 137.5 - 9.5 to 137.5 + 9.5, which corresponds to (128, 147).
+
+### f)
+
+False. The margin of error is directly proportional to the standard error, which is inversely proportional to the square root of the sample size. To cut the margin of error in half, you would need to quadruple the sample size, not to double it.
+
+## Question 8 (Exercise 5.12 on Page 188): 
+
+### a)
+
+The 95% confidence interval (3.40 to 4.24 days) means that we are 95% confident that the true average number of days during the past 30 days for which the mental health of US residents was not good falls between 3.40 and 4.24 days. It provides a range of plausible values for the true population parameter.
+
+### b)
+
+"95% confident" means that if we were to take many random samples and calculate a 95% confidence interval for each sample, about 95% of those intervals would contain the true population parameter. In the context of the mental health survey, it means that there is a high degree of certainty that the true average number of days with poor mental health falls within the reported interval(3.40 to 4.24 days).
+
+### c)
+
+This new interval will be wider than the 95% confidence interval because a higher confidence level requires a larger range to be more certain that it captures the true population parameter. The new interval would cover a larger range of values.
+
+### d)
+
+The standard error of the estimate would be bigger since the standard error is inversely proportional to the square root of the sample size. Decreasing the sample size from 1151 to 500 increases the variability of the sample mean, leading to a larger standard error.
+
+
+## Question 9 (Exercise 5.14 on Page 188): 
+
+Confidence Interval = phat +- Z* sqrt(phat* (1-phat)$/$n)
+phat = x$/$n = 142$/$603 = 0.2355
+For a 95% confidence interval, Z = -1.96
+n = 603
+Confidence Interval = 0.2355 +- (-1.96)* sqrt(0.2355* (1-0.2355)$/$603) = [0.2016, 0.2694] = [20.16%, 26.94%]
+The confidence interval in this case is [20.16%, 26.94%].
